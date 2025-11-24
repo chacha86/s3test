@@ -8,6 +8,12 @@ on:
       - "Dockerfile"
     branches:
       - main
+
+# 권한 최소화/명시화
+permissions:
+  contents: write # 태그/릴리즈
+  packages: write # GHCR 푸시
+
 jobs:
   makeTagAndRelease:
     runs-on: ubuntu-latest
